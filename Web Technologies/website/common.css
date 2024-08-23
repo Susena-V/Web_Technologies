@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Amiri'; 
+    font-size: 20px;
+    display: flex;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* For positioning overlay */
+    background: url('https://media.giphy.com/media/Qvp6Z2fidQR34IcwQ5/giphy.gif') no-repeat center center fixed; /* Updated background URL */
+    background-size: cover; /* Ensure the background covers the entire viewport */
+}
+
+
+.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22%; /* Adjust as needed */
+    height: 100%;
+    background: url('Sus_Purple.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1; /* Ensure it stays behind the content */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.left .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height of .left */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+    padding: 22px;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure it is above the background  */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    transition: background 0.3s;
+}
+
+.left:hover .overlay {
+    background: rgba(220, 200, 255, 0.8); /* Darker background on hover */
+    justify-content: flex-start;
+    transition: background 0.3s;
+    color: black;
+}
+
+.left .overlay a {
+    color: #aa99ff; /* Default link color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.left:hover .overlay a {
+    color: #ff08de; /* New link color on hover */
+    text-decoration: underline; /* Optional: add underline to links on hover */
+}
+
+.right {
+    margin-left: 22%; /* Match the width of the .left column */
+    width: 78%; /* Adjust to fit the rest of the screen */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* For positioning content */
+    z-index: 3; /* Ensure it is above the .left column */
+    padding: 20px;
+}
+
+.buttons-container {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 4; /* Ensure it is above other content */
+}
+
+.btn {
+    background-color: rgba(0, 0, 0,0.5); /* Button background color */
+    color: #aa99ff; /* Button text color */
+    border: solid;
+    border-color:#aa99ff; 
+    border-width:1px;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Button padding */
+    margin: 5px; /* Space between buttons */
+    font-family: 'Bellefair'; /* Button font */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255,0.7);
+    color: rgb(95, 85, 144) /* Button background color on hover */
+}
+
+.btn.active {
+    background-color: #aa99ff; /* Background color on click */
+    color: white; /* Text color on click */
+}
+
+.header {
+    color: rgb(220, 200, 255);
+    text-align: left;
+}
+
+.header h1 {
+    font-family: 'Arapey';
+    font-size: 65px;
+    text-shadow: 2px 2px 5px rgba(220, 200, 255, 0.7);
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.content-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 18px;
+    position: relative;
+    z-index: 3; /* Ensure it is above the overlay */
+    overflow: auto;
+}
+
+/* Separate formatting for each heading */
+h2 {
+    font-family: 'Aref Ruqaa';
+    font-size: 22px;
+    color: #bb99ff;
+    font-weight: bold;
+    margin-top: 20px; /* Space above each heading */
+    margin-bottom: 10px; /* Space below each heading */
+}
+
+.highlight {
+    color: rgb(220, 200, 255);
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0;
+}
+
+ul ul {
+    padding-left: 20px; /* Indent sub-lists */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+ul li strong {
+    color: lavender; /* Color for strong elements */
+}
+
+li {
+    margin-bottom: 10px;
+    margin-left: 15px; /* Space between list items */
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+    .left, .right {
+        position: static; /* Reset position for stacking layout */
+        width: 100%; /* Full width for stacked layout */
+        height: auto; /* Allow height to adjust */
+    }
+}
+
+ul li strong {
+    color: rgb(220, 200, 255);
+}
+
+.color_class{
+    color: rgb(220, 200, 220);
+    font-size: 22px;
+}
+
+.github-logo {
+    height: 50px; /* Set the height to 50px */
+    width: auto;  /* Maintain aspect ratio */
+    display: inline-block; /* Ensure it behaves as an inline element */
+    vertical-align: middle; /* Align with text */
+    margin-right: 5px; /* Space between logo and text */
+}
+
+

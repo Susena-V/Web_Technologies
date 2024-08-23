@@ -1,0 +1,96 @@
+/* Differing styles */
+
+body {
+    font-family: 'Arapey', serif;
+    height: 100vh;
+    color: rgb(50, 50, 50); /* Adjusted for readability on white background */
+}
+
+.left .overlay {
+    font-size: 20px;
+    font-family: 'Bellefair';
+}
+
+.blog-container {
+    position: absolute;
+    top: 140px; /* Adjust to position below the "Blog" title */
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds the page */
+    max-height: calc(100vh - 160px); /* Adjust to keep within view */
+    padding-right: 20px; /* Add space for scrollbar */
+}
+
+.blog {
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px; /* Space between blogs */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3); /* Shadow for better readability */
+    display: flex;
+    align-items: flex-start; /* Align image and text at the top */
+}
+
+.blog img {
+    width: 200px; /* Adjust the width of the image */
+    height: 200px; /* Adjust the height of the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.blog-content {
+    flex: 1; /* Allow content to take up remaining space */
+}
+
+.blog h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: rgb(180, 100, 240);
+}
+
+.blog p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgb(50, 50, 50);
+}
+
+@media screen and (max-width: 700px) {
+    .top-left h1 {
+        font-size: 35px;
+    }
+    .blog {
+        flex-direction: column; /* Stack image and content vertically on smaller screens */
+        align-items: flex-start; /* Center-align the content */
+        display:flex;
+
+    }
+    .blog img {
+        width: 100%; /* Make image take full width */
+        height: auto; /* Adjust height automatically */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+    .blog h2 {
+        font-size: 28px;
+    }
+    .blog p {
+        font-size: 18px;
+    }
+}
+
+.blog a{
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: rgb(180, 100, 240);
+    text-decoration: None;
+}
+
+.img-size{
+    width: 200px; /* Adjust the width of the image */
+    height: 200px; /* Adjust the height of the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10px;
+    margin-right: 20px; /* Space between image and text */
+    float: left; /* Ensure image is aligned to the left */
+}
