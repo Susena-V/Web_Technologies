@@ -1,2 +1,2 @@
 # Web_Technologies
-Storage of my coursework for Web Technologies
+This repository is initialized with the coursework I will do throughout my semester in Web Technologies
